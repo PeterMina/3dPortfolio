@@ -51,13 +51,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[14px] sm:text-[17px] max-w-3xl sm:leading-[30px] leading-1"
       >
-        Hi, I’m Swastik Yadav — a passionate Frontend / Full Stack Developer
-        with hands-on experience in building modern, responsive web applications
-        using technologies like React.js, Tailwind CSS, Node.js, and MongoDB.
-        I’ve worked on real-world freelance projects and participated in
-        hackathons like ReImagine, where I pushed my creativity and technical
-        skills to the next level.
-      </motion.p>
+        Hi, I'm Peter Mina — a passionate AI Engineer and Full Stack Developer with expertise in building intelligent web applications and cutting-edge AI solutions. With hands-on experience in React.js, Node.js, and advanced AI frameworks like PyTorch and TensorFlow, I specialize in integrating machine learning capabilities into real-world applications.
+         Currently working as a Jr. Full Stack Developer at e-SKY.ca,
+         I Joined Alex Eagles team where we developed autonomous drone systems achieving 96% accuracy, 
+         contributed to pharmaceutical research through deep learning drug interaction predictions,
+          and was recognized as a NASA Space Apps 2024 Global Nominee for creating an innovative exoplanet exploration platform.
+           I thrive on transforming complex AI concepts into practical solutions that make a meaningful impact.   
+              </motion.p>
       <div className="mt-20 flex  flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={index} index={index} {...service} />

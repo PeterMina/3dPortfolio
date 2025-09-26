@@ -23,6 +23,7 @@ import {
   falverra,
   tripguide,
   threejs,
+  python,
 } from "../assets";
 
 export const navLinks = [
@@ -48,11 +49,11 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full Stack Developer",
     icon: web,
   },
   {
-    title: "React Developer",
+    title: "AI/ML Engineer",
     icon: mobile,
   },
   {
@@ -60,34 +61,44 @@ const services = [
     icon: backend,
   },
   {
-    title: "MERN Stack",
+    title: "Computer Vision",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "Docker",
+    icon: docker,
   },
   {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
-
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-
   {
     name: "HTML 5",
     icon: html,
@@ -96,52 +107,37 @@ const technologies = [
     name: "CSS 3",
     icon: css,
   },
-
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
   },
 ];
 
 const experiences = [
   {
-    title: "Freelance Frontend Developer",
-    company_name: "Self-employed",
-    icon: freelance, // Replace with any icon you like
+    title: "Jr. Full Stack Developer",
+    company_name: "e-SKY.ca",
+    icon: freelance,
     iconBg: "#0188E3",
-    date: "Jan 2023 - Present",
+    date: "May 2023 - Present",
     points: [
-      "Built responsive and interactive web apps using React.js, Tailwind CSS, and GSAP.",
-      "Developed and deployed modern landing pages and portfolio websites for clients.",
-      "Integrated APIs and handled form validation, animations, and smooth scroll effects.",
-      "Delivered pixel-perfect UI designs based on Figma and Adobe XD mockups.",
+      "Developed and maintained full-stack web applications using modern technologies.",
+      "Implemented responsive designs and interactive user interfaces with React.js and JavaScript.",
+      "Built and optimized backend services using Node.js, Express.js, and various databases.",
+      "Collaborated remotely with international teams on complex software solutions.",
     ],
   },
   {
-    title: "Full Stack Development Trainee",
-    company_name: "Sheryians Coding School",
-    icon: sheryians, // Or institute logo
+    title: "Tech Team Member and Staff",
+    company_name: "Alex Eagles",
+    icon: sheryians,
     iconBg: "#ffff",
-    date: "Aug 2023 - Mar 2025",
+    date: "July 2024 - Present",
     points: [
-      "Completed an intensive training program focused on MERN stack development.",
-      "Built multiple full-stack projects, including CRUD apps and authentication systems.",
-      "Worked with tools like Node.js, Express.js, MongoDB, React.js, and Git.",
-      "Gained hands-on experience in deploying apps and following clean code practices.",
+      "Contributed to technical projects and software development initiatives.",
+      "Worked with AI/ML technologies and computer vision applications.",
+      "Collaborated on team projects involving data analysis and intelligent systems.",
+      "Mentored junior team members in programming best practices.",
     ],
   },
 ];
@@ -175,72 +171,70 @@ const testimonials = [
 
 const projects = [
   {
-    name: "MacBookPro-redesign",
+    name: "Drug-Drug Interaction Prediction",
     description:
-      "A visually engaging website that showcases a redesigned MacBook Pro with smooth animations and a realistic 3D model, offering users an interactive and immersive way to explore the product’s look and features.",
+      "Deep Learning graduation project using SMILES strings and graph neural networks to predict drug-drug interactions. Implemented advanced AI techniques for pharmaceutical safety analysis with high accuracy predictions.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "three.js",
+        name: "pytorch",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "deep-learning",
         color: "pink-text-gradient",
       },
     ],
     image: macbookpro,
-    source_code_link: "https://github.com/gitswastik08/macbook_landingpage",
-    live_website_link: "https://macbookpro3d.netlify.app/",
+    source_code_link: "https://github.com/",
+    live_website_link: "#",
   },
   {
-    name: "Falverra Redesign",
+    name: "Autonomous Drone System",
     description:
-      "A sleek and animated website redesign for Falverra, combining a clean layout with smooth transitions to deliver an engaging, modern browsing experience that highlights the brand’s visual identity and message.",
+      "Computer vision system for autonomous drone navigation using YOLOv8 object detection with 96% accuracy. Integrated real-time processing capabilities for intelligent flight path optimization.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "yolov8",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "opencv",
+        color: "green-text-gradient",
+      },
+    ],
+    image: falverra,
+    source_code_link: "https://github.com/",
+    live_website_link: "#",
+  },
+  {
+    name: "NASA Space Apps 2024 Platform",
+    description:
+      "Exoplanet exploration platform with integrated AI chatbot for NASA Space Apps Challenge 2024. Features interactive visualizations and intelligent query system for space data analysis.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "multi-page",
-        color: "green-text-gradient",
-      },
-    ],
-    image: falverra,
-    source_code_link: "https://github.com/gitswastik08/falverra-redesign",
-    live_website_link: "https://falverra-recode.netlify.app/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "ai-chatbot",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "data-viz",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    // github link ⬇️
     source_code_link: "https://github.com/",
-    // project link ⬇️
-    live_website_link: "https://app.netlify.com/teams/gitswastik08/projects",
+    live_website_link: "#",
   },
 ];
 

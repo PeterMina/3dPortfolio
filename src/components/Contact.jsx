@@ -36,9 +36,8 @@ const Contact = () => {
         "template_49jw5yq",
         {
           from_name: form.name,
-
           from_email: form.email,
-
+          to_email: "petermina6187@gmail.com",
           message: form.message,
         },
         "3lDtCP31mFt_52s7F"

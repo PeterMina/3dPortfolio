@@ -12,7 +12,7 @@ const CanvasLoader = () => {
         <p> Initializing portfolio...</p>
         <p> Loading 3D assets... {progress.toFixed(0)}%</p>
         <p> Rendering interface...</p>
-        <p className="text-[#915eff] mt-2">[Swastik Dev Engine v1.0]</p>
+        <p className="text-[#915eff] mt-2">[Peter Dev Engine v1.0]</p>
       </div>
     </Html>
   );

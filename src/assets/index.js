@@ -1,3 +1,4 @@
+import pythonImg from "../assets/python.jpg";
 const logo =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/Swastik_Yadav_logo.png?updatedAt=1750349700579";
 const backend =
@@ -19,6 +20,7 @@ const css =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/css.png?updatedAt=1749961104488";
 const docker =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/docker.png?updatedAt=1749961103144";
+const python =pythonImg;
 const figma =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/figma.png?updatedAt=1749961103288";
 const git =
@@ -88,4 +90,5 @@ export {
   macbookpro,
   falverra,
   tripguide,
+  python,
 };

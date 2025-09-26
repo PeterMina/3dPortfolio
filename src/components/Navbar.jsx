@@ -30,7 +30,7 @@ const Navbar = () => {
             height={64}
           />
           <p className="text-white text-[17px] font-semibold cursor-pointer">
-            <span className="sm:block  font-bold">Swastik</span> | Yadav
+            <span className="sm:block  font-bold">Peter</span> | Elwy
           </p>
         </Link>
 
