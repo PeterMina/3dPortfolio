@@ -24,6 +24,8 @@ import {
   tripguide,
   threejs,
   python,
+  alexEagles,
+  eskySky,
 } from "../assets";
 
 export const navLinks = [
@@ -117,7 +119,7 @@ const experiences = [
   {
     title: "Jr. Full Stack Developer",
     company_name: "e-SKY.ca",
-    icon: freelance,
+    icon: eskySky,
     iconBg: "#0188E3",
     date: "May 2023 - Present",
     points: [
@@ -130,7 +132,7 @@ const experiences = [
   {
     title: "Tech Team Member and Staff",
     company_name: "Alex Eagles",
-    icon: sheryians,
+    icon: alexEagles,
     iconBg: "#ffff",
     date: "July 2024 - Present",
     points: [
