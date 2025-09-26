@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("/desktop_pc/scene.gltf");
+  const computer = useGLTF("/3dPortfolio/desktop_pc/scene.gltf");
 
   useEffect(() => {
     computer.scene.traverse((child) => {
