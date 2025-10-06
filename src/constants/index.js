@@ -191,11 +191,13 @@ const projects = [
       },
     ],
     image: macbookpro,
-    source_code_link: "https://github.com/",
-    live_website_link: "#",
+    source_code_link:
+      "https://github.com/Pharma-Intel-Graduation-Project/Pharma-Intel",
+    live_website_link:
+      "https://github.com/Pharma-Intel-Graduation-Project/Pharma-Intel",
   },
   {
-    name: "Autonomous Drone System",
+    name: "Autonomous Drone System (Alex Eagles)",
     description:
       "Computer vision system for autonomous drone navigation using YOLOv8 object detection with 96% accuracy. Integrated real-time processing capabilities for intelligent flight path optimization.",
     tags: [
@@ -213,8 +215,10 @@ const projects = [
       },
     ],
     image: falverra,
-    source_code_link: "https://github.com/",
-    live_website_link: "#",
+    source_code_link: "https://github.com/Alex-Eagles",
+    live_website_link: "https://alex-eagles.com/",
+    presentation_link:
+      "https://docs.google.com/presentation/d/1J1E5GCHFWg8Gq3mJDSmhSehD43meDJkNpQ-JHytmGwQ/edit?usp=sharing",
   },
   {
     name: "NASA Space Apps 2024 Platform",
@@ -235,8 +239,13 @@ const projects = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
-    live_website_link: "#",
+    source_code_link:
+      "https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/aaaaahh-ya-kawkabna/?tab=members",
+    live_website_link: "https://spaceeagles.vercel.app",
+    drive_link:
+      "https://drive.google.com/drive/u/0/folders/1KAU_Qk5-IrRKzcVEo6e3SDkUwkcIUEmB",
+    presentation_link:
+      "https://docs.google.com/presentation/d/1TNGbG09cZCF5hQPclynf6Nxid4pwfzNj/edit?slide=id.p1#slide=id.p1",
   },
 ];
 

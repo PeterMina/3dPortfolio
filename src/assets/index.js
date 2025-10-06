@@ -1,6 +1,8 @@
 import pythonImg from "../assets/python.jpg";
 import alexEaglesImg from "../assets/AlexEagles.jpg";
 import eskySkyImg from "../assets/e-sky.png";
+import spaceEaglesImg from "../assets/SpaceEagles_image.png";
+import alexEaglesProjectImg from "../assets/AlexEagles_image.png";
 const logo =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/Swastik_Yadav_logo.png?updatedAt=1750349700579";
 const backend =
@@ -13,6 +15,10 @@ const web =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/web.png?updatedAt=1749961126214";
 const github =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/github.png?updatedAt=1749965006566";
+const drive =
+  "https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg";
+const slides =
+  "https://upload.wikimedia.org/wikipedia/commons/1/1e/Google_Slides_logo_%282014-2020%29.svg";
 const menu =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/menu.png?updatedAt=1750673289882";
 const close =
@@ -60,10 +66,8 @@ const freelance =
 
 const macbookpro =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/MacbookPro_TGyn1EY09X.png?updatedAt=1750225807061";
-const falverra =
-  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/Screenshot%202025-06-21%20015159.png?updatedAt=1750451051537";
-const tripguide =
-  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tripguide.png?updatedAt=1749961172334";
+const falverra = alexEaglesProjectImg;
+const tripguide = spaceEaglesImg;
 
 export {
   logo,
@@ -72,6 +76,8 @@ export {
   mobile,
   web,
   github,
+  drive,
+  slides,
   menu,
   close,
   css,

@@ -4,7 +4,7 @@ import { styles } from "../styles";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import { github } from "../assets";
+import { github, drive, slides } from "../assets";
 
 const ProjectCard = ({
   index,
@@ -14,6 +14,8 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_website_link,
+  drive_link,
+  presentation_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -38,22 +40,63 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute  inset-0 flex justify-end mt-3 card-img_hover">
-            <div
-              onClick={() => {
-                window.open(source_code_link, "_blank");
-              }}
-              className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
-            >
-              <img
-                src={`${github}${github.includes("?") ? "&" : "?"}tr=f-auto`}
-                alt="GitHub Icon"
-                loading="lazy"
-                width="50%"
-                height="50%"
-                className="object-contain w-1/2 h-1/2"
-              />
+          <div className="absolute  inset-0 flex justify-between mt-3 card-img_hover">
+            <div className="flex gap-2 ml-3">
+              {drive_link && (
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(drive_link, "_blank");
+                  }}
+                  className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src={drive}
+                    alt="Google Drive Icon"
+                    loading="lazy"
+                    width="50%"
+                    height="50%"
+                    className="object-contain w-1/2 h-1/2"
+                  />
+                </div>
+              )}
+              {presentation_link && (
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(presentation_link, "_blank");
+                  }}
+                  className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src={slides}
+                    alt="Google Slides Icon"
+                    loading="lazy"
+                    width="50%"
+                    height="50%"
+                    className="object-contain w-1/2 h-1/2"
+                  />
+                </div>
+              )}
             </div>
+            {source_code_link && (
+              <div
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(source_code_link, "_blank");
+                }}
+                className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer mr-3"
+              >
+                <img
+                  src={`${github}${github.includes("?") ? "&" : "?"}tr=f-auto`}
+                  alt="GitHub Icon"
+                  loading="lazy"
+                  width="50%"
+                  height="50%"
+                  className="object-contain w-1/2 h-1/2"
+                />
+              </div>
+            )}
           </div>
         </div>
         <div className="mt-5">
