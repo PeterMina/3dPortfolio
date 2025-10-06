@@ -1,8 +1,9 @@
-import pythonImg from "../assets/python.jpg";
-import alexEaglesImg from "../assets/AlexEagles.jpg";
-import eskySkyImg from "../assets/e-sky.png";
-import spaceEaglesImg from "../assets/SpaceEagles_image.png";
-import alexEaglesProjectImg from "../assets/AlexEagles_image.png";
+import pythonImg from "../assets/python.webp";
+import alexEaglesImg from "../assets/AlexEagles.webp";
+import eskySkyImg from "../assets/e-sky.webp";
+import spaceEaglesImg from "../assets/SpaceEagles_image.webp";
+import alexEaglesProjectImg from "../assets/AlexEagles_image.webp";
+import DDIImg from "../assets/DDI.webp";
 const logo =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/Swastik_Yadav_logo.png?updatedAt=1750349700579";
 const backend =
@@ -64,8 +65,7 @@ const sheryians =
 const freelance =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/company/images.png?updatedAt=1750261804051";
 
-const macbookpro =
-  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/MacbookPro_TGyn1EY09X.png?updatedAt=1750225807061";
+const macbookpro =DDIImg;
 const falverra = alexEaglesProjectImg;
 const tripguide = spaceEaglesImg;
 

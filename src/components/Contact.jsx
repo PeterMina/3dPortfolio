@@ -18,13 +18,41 @@ const Contact = () => {
     message: "",
   });
   const [loading, setloading] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [success, setSuccess] = useState(false);
+
   const handlechange = (e) => {
     const { name, value } = e.target;
     setform({ ...form, [name]: value });
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: "" });
+    }
   };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!form.name.trim()) newErrors.name = "Name is required";
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Email is invalid";
+    }
+    if (!form.message.trim()) newErrors.message = "Message is required";
+    return newErrors;
+  };
+
   const handlesubmit = (e) => {
     e.preventDefault();
+
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+
     setloading(true);
+    setSuccess(false);
 
     // template_49jw5yq
     // service_9gvq101
@@ -45,17 +73,18 @@ const Contact = () => {
       .then(
         () => {
           setloading(false);
-          alert("Thank you. I will get back to you as soon as possible");
+          setSuccess(true);
           setform({
             name: "",
             email: "",
             message: "",
           });
+          setTimeout(() => setSuccess(false), 5000);
         },
         (error) => {
           setloading(false);
           console.log(error);
-          alert("Something went wrong.");
+          setErrors({ submit: "Failed to send message. Please try again." });
         }
       );
   };
@@ -73,6 +102,17 @@ const Contact = () => {
           onSubmit={handlesubmit}
           className="mt-12 flex flex-col gap-8"
         >
+          {success && (
+            <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg">
+              Thank you! I'll get back to you soon.
+            </div>
+          )}
+          {errors.submit && (
+            <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg">
+              {errors.submit}
+            </div>
+          )}
+
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -81,8 +121,11 @@ const Contact = () => {
               value={form.name}
               onChange={handlechange}
               placeholder="what's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.name ? "border-2 border-red-500" : ""
+              }`}
             />
+            {errors.name && <span className="text-red-500 text-sm mt-1">{errors.name}</span>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
@@ -92,8 +135,11 @@ const Contact = () => {
               value={form.email}
               onChange={handlechange}
               placeholder="what's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.email ? "border-2 border-red-500" : ""
+              }`}
             />
+            {errors.email && <span className="text-red-500 text-sm mt-1">{errors.email}</span>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -104,12 +150,16 @@ const Contact = () => {
               value={form.message}
               onChange={handlechange}
               placeholder="what do you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.message ? "border-2 border-red-500" : ""
+              }`}
             />
+            {errors.message && <span className="text-red-500 text-sm mt-1">{errors.message}</span>}
           </label>
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            disabled={loading}
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-tertiary/80 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Sending..." : "Send"}
           </button>

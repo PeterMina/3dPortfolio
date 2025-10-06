@@ -8,6 +8,18 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+  const handleResumeDownload = () => {
+    // Track download event
+    if (window.gtag) {
+      window.gtag('event', 'resume_download', {
+        event_category: 'engagement',
+        event_label: 'Resume Downloaded'
+      });
+    }
+    // You can also use other analytics like plausible, etc.
+    console.log('Resume downloaded');
+  };
+
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-2 z-20 bg-[#050a208e] fixed`}
@@ -34,7 +46,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden text-nowrap sm:flex flex-row gap-10">
+        <ul className="list-none hidden text-nowrap sm:flex flex-row gap-10 items-center">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -46,6 +58,16 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+          <li>
+            <a
+              href="/resume.pdf"
+              download="Peter_Elwy_Resume.pdf"
+              onClick={handleResumeDownload}
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg text-[16px] font-semibold transition-all duration-300 shadow-lg hover:shadow-pink-500/50"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         {/* Mobile menu icon */}
@@ -92,6 +114,17 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </p>
           ))}
+          <a
+            href="/resume.pdf"
+            download="Peter_Elwy_Resume.pdf"
+            onClick={(e) => {
+              handleResumeDownload();
+              setToggle(false);
+            }}
+            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-lg text-[18px] font-semibold transition-all duration-300 shadow-lg hover:shadow-pink-500/50 text-center mt-4"
+          >
+            Download Resume
+          </a>
         </div>
       </div>
 

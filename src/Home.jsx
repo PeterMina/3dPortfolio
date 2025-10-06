@@ -1,12 +1,15 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Tech from "./components/Tech";
-import Works from "./components/Works";
-import Contact from "./components/Contact";
-import { StarsCanvas } from "./components/canvas";
+
+// Lazy load components for better performance
+const About = lazy(() => import("./components/About"));
+const Experience = lazy(() => import("./components/Experience"));
+const Tech = lazy(() => import("./components/Tech"));
+const Works = lazy(() => import("./components/Works"));
+const GitHubStats = lazy(() => import("./components/GitHubStats"));
+const Contact = lazy(() => import("./components/Contact"));
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 const Home = () => {
   return (
@@ -15,14 +18,17 @@ const Home = () => {
         <Navbar />
         <Hero />
       </div>
-      <About />
-      <Experience />
-      <Tech />
-      <Works />
-      <div className="relative z-0">
-        <Contact />
-        <StarsCanvas />
-      </div>
+      <Suspense fallback={<div className="h-screen flex items-center justify-center"><div className="text-white">Loading...</div></div>}>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <GitHubStats />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
+      </Suspense>
     </div>
   );
 };
