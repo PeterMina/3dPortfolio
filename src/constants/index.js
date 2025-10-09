@@ -26,6 +26,8 @@ import {
   python,
   alexEagles,
   eskySky,
+  c,
+  cpp,
 } from "../assets";
 
 export const navLinks = [
@@ -35,19 +37,16 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "experience",
+    title: "Experience",
   },
-
   {
     id: "skills",
-    title: "skills",
+    title: "Skills",
   },
-
   {
-    id: "github",
-    title: "GitHub",
+    id: "projects",
+    title: "Projects",
   },
-
   {
     id: "contact",
     title: "Contact",
@@ -79,12 +78,16 @@ const technologies = [
     icon: python,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "C++",
+    icon: cpp,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
   },
   {
     name: "Node JS",
@@ -103,17 +106,21 @@ const technologies = [
     icon: threejs,
   },
   {
+    name: "C",
+    icon: c,
+  },
+  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
+  // {
+  //   name: "HTML 5",
+  //   icon: html,
+  // },
+  // {
+  //   name: "CSS 3",
+  //   icon: css,
+  // },
   {
     name: "git",
     icon: git,
@@ -125,7 +132,7 @@ const experiences = [
     title: "Jr. Full Stack Developer",
     company_name: "e-SKY.ca",
     icon: eskySky,
-    iconBg: "#0188E3",
+    iconBg: "transparent",
     date: "May 2023 - Present",
     points: [
       "Developed and maintained full-stack web applications using modern technologies.",
@@ -138,7 +145,7 @@ const experiences = [
     title: "Tech Team Member and Staff",
     company_name: "Alex Eagles",
     icon: alexEagles,
-    iconBg: "#ffff",
+    iconBg: "transparent",
     date: "July 2024 - Present",
     points: [
       "Contributed to technical projects and software development initiatives.",

@@ -8,6 +8,14 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const handleResumeDownload = () => {
     // Track download event
     if (window.gtag) {
@@ -52,15 +60,22 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-[#ffffff69]"
-              } hover:text-[#ffffffac] text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
+              } hover:text-[#ffffffac] text-[18px] font-medium cursor-pointer transition-colors`}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a
+                href={`#${link.id}`}
+                onClick={(e) => {
+                  handleNavClick(e, link.id);
+                  setActive(link.title);
+                }}
+              >
+                {link.title}
+              </a>
             </li>
           ))}
           <li>
             <a
-              href="/resume.pdf"
+              href="/3dPortfolio/resume.pdf"
               download="Peter_Elwy_Resume.pdf"
               onClick={handleResumeDownload}
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg text-[16px] font-semibold transition-all duration-300 shadow-lg hover:shadow-pink-500/50"
@@ -103,19 +118,21 @@ const Navbar = () => {
           </div>
 
           {navLinks.map((link) => (
-            <p
+            <a
               key={link.id}
-              onClick={() => {
+              href={`#${link.id}`}
+              onClick={(e) => {
+                handleNavClick(e, link.id);
                 setActive(link.title);
                 setToggle(false);
               }}
               className="text-[22px] mt-2 text-[#ffffffb0] hover:text-white font-medium cursor-pointer transition-all"
             >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </p>
+              {link.title}
+            </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/3dPortfolio/resume.pdf"
             download="Peter_Elwy_Resume.pdf"
             onClick={(e) => {
               handleResumeDownload();

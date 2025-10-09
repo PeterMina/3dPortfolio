@@ -7,7 +7,6 @@ const About = lazy(() => import("./components/About"));
 const Experience = lazy(() => import("./components/Experience"));
 const Tech = lazy(() => import("./components/Tech"));
 const Works = lazy(() => import("./components/Works"));
-const GitHubStats = lazy(() => import("./components/GitHubStats"));
 const Contact = lazy(() => import("./components/Contact"));
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
@@ -23,7 +22,6 @@ const Home = () => {
         <Experience />
         <Tech />
         <Works />
-        <GitHubStats />
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
