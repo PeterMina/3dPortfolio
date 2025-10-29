@@ -13,7 +13,9 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  source_code_link_2,
   live_website_link,
+  streamlit_link,
   drive_link,
   presentation_link,
 }) => {
@@ -78,25 +80,64 @@ const ProjectCard = ({
                   />
                 </div>
               )}
+              {streamlit_link && (
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(streamlit_link, "_blank");
+                  }}
+                  className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+                  title="Streamlit App"
+                >
+                  <img
+                    src="https://streamlit.io/images/brand/streamlit-mark-color.png"
+                    alt="Streamlit Icon"
+                    loading="lazy"
+                    width="50%"
+                    height="50%"
+                    className="object-contain w-1/2 h-1/2"
+                  />
+                </div>
+              )}
             </div>
-            {source_code_link && (
-              <div
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.open(source_code_link, "_blank");
-                }}
-                className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer mr-3"
-              >
-                <img
-                  src={`${github}${github.includes("?") ? "&" : "?"}tr=f-auto`}
-                  alt="GitHub Icon"
-                  loading="lazy"
-                  width="50%"
-                  height="50%"
-                  className="object-contain w-1/2 h-1/2"
-                />
-              </div>
-            )}
+            <div className="flex gap-2 mr-3">
+              {source_code_link && (
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(source_code_link, "_blank");
+                  }}
+                  className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src={`${github}${github.includes("?") ? "&" : "?"}tr=f-auto`}
+                    alt="GitHub Icon"
+                    loading="lazy"
+                    width="50%"
+                    height="50%"
+                    className="object-contain w-1/2 h-1/2"
+                  />
+                </div>
+              )}
+              {source_code_link_2 && (
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(source_code_link_2, "_blank");
+                  }}
+                  className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src={`${github}${github.includes("?") ? "&" : "?"}tr=f-auto`}
+                    alt="GitHub Icon 2"
+                    loading="lazy"
+                    width="50%"
+                    height="50%"
+                    className="object-contain w-1/2 h-1/2"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <div className="mt-5">

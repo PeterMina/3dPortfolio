@@ -29,7 +29,7 @@ import {
   c,
   cpp,
   kando,
-  bondo2Img,
+  snake,
 } from "../assets";
 
 export const navLinks = [
@@ -206,7 +206,9 @@ const projects = [
     ],
     image: macbookpro,
     source_code_link: "https://github.com/PeterMina/Khemical",
+    source_code_link_2: "https://github.com/Pharma-Intel-Graduation-Project/Pharma-Intel",
     live_website_link: "https://khemical.productvalidation.live/login",
+    streamlit_link: "https://khemical.streamlit.app",
     drive_link:
       "https://drive.google.com/drive/u/0/folders/1oTv2j97WQiGAyTcsF53NgeWI4WM3_uGd",
   },
@@ -235,7 +237,7 @@ const projects = [
   {
     name: "Reinforcement Learning Snake Game AI",
     description:
-    "This project implements a reinforcement learning agent that learns to play the classic Snake game using a neural network and Q-learning. Features Game implementation with rendering, Model architecture with training logic, and Agent that learns from experience.",
+      "This project implements a reinforcement learning agent that learns to play the classic Snake game using a neural network and Q-learning. Features Game implementation with rendering, Model architecture with training logic, and Agent that learns from experience.",
     tags: [
       {
         name: "python",
@@ -250,10 +252,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: bondo2Img,
+    image: snake,
     source_code_link: "https://github.com/PeterMina/Snake-AI-Trainer",
-    live_website_link: "https://github.com/yourusername/snake-rl-ai",
-    drive_link:"https://drive.google.com/drive/folders/1bd1NARm6bdf0_OdJTqvD-ushfkPLGFFf?usp=sharing",
+    live_website_link: "https://github.com/PeterMina/Snake-AI-Trainer",
+    drive_link: "https://drive.google.com/drive/folders/1bd1NARm6bdf0_OdJTqvD-ushfkPLGFFf?usp=sharing",
   },
   {
     name: "Autonomous Drone System (Alex Eagles)",

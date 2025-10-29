@@ -6,8 +6,8 @@ import alexEaglesProjectImg from "../assets/AlexEagles_image.webp";
 import DDIImg from "../assets/DDI.webp";
 import cImg from "../assets/C.webp";
 import cppImg from "../assets/C++.webp";
-import KandoImg from "../assets/Kando.webp";
-import bondo2 from "../assets/Snake.webp";
+import kandoImg from "../assets/Kando.webp";
+import snakeImg from "../assets/Snake.webp";
 const logo =
   "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/Swastik_Yadav_logo.png?updatedAt=1750349700579";
 const backend =
@@ -74,8 +74,8 @@ const falverra = alexEaglesProjectImg;
 const tripguide = spaceEaglesImg;
 const c = cImg;
 const cpp = cppImg;
-const kando = KandoImg;
-const bondo2Img = bondo2;
+const kando = kandoImg;
+const snake = snakeImg;
 
 export {
   logo,
@@ -114,5 +114,5 @@ export {
   c,
   cpp,
   kando,
-  bondo2Img,
+  snake,
 };
