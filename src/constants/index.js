@@ -28,6 +28,7 @@ import {
   eskySky,
   c,
   cpp,
+  kando
 } from "../assets";
 
 export const navLinks = [
@@ -207,6 +208,50 @@ const projects = [
       "https://github.com/Pharma-Intel-Graduation-Project/Pharma-Intel",
     live_website_link:
       "https://github.com/Pharma-Intel-Graduation-Project/Pharma-Intel",
+  },
+   {
+    name: "Kando - Kanban Task Manager",
+    description:
+      "A modern, intuitive Kanban-based task manager designed to bring clarity and control to any project. Built for teams and individuals who value efficiency, Kando simplifies the flow of work, transforming chaotic task lists into clear, actionable visual boards.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "task-management",
+        color: "green-text-gradient",
+      },
+      {
+        name: "kanban",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: kando,
+    source_code_link: "https://github.com/PeterMina/Kando",
+    live_website_link: "https://petermina.github.io/Kando/",
+  },
+  {
+    name: "Reinforcement Learning Snake Game AI",
+    description:
+      "This project implements a reinforcement learning agent that learns to play the classic Snake game using a neural network and Q-learning. Features Game implementation with rendering, Model architecture with training logic, and Agent that learns from experience.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "pytorch",
+        color: "green-text-gradient",
+      },
+      {
+        name: "reinforcement-learning",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: falverra,
+    source_code_link: "https://github.com/yourusername/snake-rl-ai",
+    live_website_link: "https://github.com/yourusername/snake-rl-ai",
   },
   {
     name: "Autonomous Drone System (Alex Eagles)",
