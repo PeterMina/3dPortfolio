@@ -1,13 +1,22 @@
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import AllTechnologies from "./components/AllTechnologies"; // for /techstack
+
+// Lazy load routes for better performance
+const Home = lazy(() => import("./Home"));
+const AllTechnologies = lazy(() => import("./components/AllTechnologies"));
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/all-technologies" element={<AllTechnologies/>} />
-    </Routes>
+    <Suspense fallback={
+      <div className="w-full h-screen flex items-center justify-center bg-[#050816]">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    }>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/all-technologies" element={<AllTechnologies/>} />
+      </Routes>
+    </Suspense>
   );
 };
 

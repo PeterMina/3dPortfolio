@@ -5,4 +5,16 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/3dPortfolio',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'three-vendor': ['three', '@react-three/fiber', '@react-three/drei'],
+          'animation-vendor': ['framer-motion', 'react-parallax-tilt'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
 })
